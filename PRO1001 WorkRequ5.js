@@ -6,7 +6,7 @@ const btn = document.getElementById("happy-duck");
 
 async function fetchData(){
     try{
-        const randomPic = await fetch("https://random-d.uk/api/v2/random");
+        const randomPic = await fetch("https://corsproxy.io/?https://random-d.uk/api/v2/random ");
         if(!randomPic.ok) throw new Error(`Fetch Error: ${randomPic.status}`);
         const duckPic = await randomPic.json();
 
