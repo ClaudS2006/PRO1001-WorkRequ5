@@ -16,3 +16,17 @@ async function fetchData(){
         return {error: "Failed to load data"};
     }
     }
+
+btn.addEventListener("click", async () => {
+    const data = await fetchData();
+    if(data.duckPic){
+        const img = document.createElement("img");
+        img.src = data.duckPic.url;
+        img.alt = "Random-Duck-Picture";
+
+        para.appendChild(img);
+    }else{
+        para.textContent = "Failed to load image";
+    }
+})
+    
