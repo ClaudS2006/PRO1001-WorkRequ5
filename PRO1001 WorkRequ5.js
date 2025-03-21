@@ -6,7 +6,7 @@ const btn = document.getElementById("happy-duck");
 // function to get picture-----------------------------------
 async function fetchData(){
     try{
-        const randomPic = await fetch("https://corsproxy.io/?https://random-d.uk/api/v2/random ");
+        const randomPic = await fetch("https://cors-anywhere.herokuapp.com/https://random-d.uk/api/v2/random ");
         if(!randomPic.ok) throw new Error(`Fetch Error: ${randomPic.status}`);
         const duckPic = await randomPic.json();
 
@@ -17,18 +17,19 @@ async function fetchData(){
     }
     }
 // event listener for click with loading spinner
-btn.addEventListener("click", async () => {
+btn.addEventListener("click", async () => {    
     // create span for spinner
     const spinner = document.createElement("span");
     spinner.classList.add("spinner");
 
-    para.textContent = ""; // empty paragraph
-    para.appendChild("spinner"); // adds span to paragraph
+     // empties paragraph
+    para.textContent = "";
+    para.appendChild(spinner); // adds span to paragraph
     try {
 
     const data = await fetchData();
     await new Promise(resolve => setTimeout(resolve,1000));
-    para.textContent = "";
+    
     if(data.duckPic){
         const img = document.createElement("img");
         img.src = data.duckPic.url;
@@ -40,7 +41,7 @@ btn.addEventListener("click", async () => {
     }
     }
     catch(error){
-        para.textContent("Error loading image");
+        para.textContent = "Error loading image";
     }
 })
     
