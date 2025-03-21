@@ -3,13 +3,22 @@ body {
     box-sizing: border-box;
 }
 #the-farm {
-
+    display: flex;
 }
 #duck-house {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-color: antiquewhite; 
 }
 #entry-sign {
 
+}
+img {
+    width: 50%;
 }
 #profile-pic {
 
