@@ -43,17 +43,16 @@ btn.addEventListener("click", async () => {
 
         para.appendChild(img);
     // if pic has message attribute display as well
-    if(data.duckPic.message){
+        if(data.duckPic.message){
         const attribute = document.createElement("p");
         attribute.textContent = data.duckPic.message;
-        para.appendChild(p);
+        para.appendChild(attribute);
     }
     }else{
         para.textContent = "Failed to load image";
-    }
-    }
-    catch(error){
+        }
+    }catch(error){
         para.textContent = "Error loading image";
     }
-})
+});
     
