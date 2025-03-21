@@ -3,7 +3,7 @@
 const header = document.getElementById("entry-sign");
 const para = document.getElementById("profile-pic");
 const btn = document.getElementById("happy-duck");
-
+// function to get picture-----------------------------------
 async function fetchData(){
     try{
         const randomPic = await fetch("https://corsproxy.io/?https://random-d.uk/api/v2/random ");
@@ -16,8 +16,15 @@ async function fetchData(){
         return {error: "Failed to load data"};
     }
     }
-
+// event listener for click with loading spinner
 btn.addEventListener("click", async () => {
+    // create span for spinner
+    const spinner = document.createElement("span");
+    spinner.classList.add("spinner");
+
+    para.textContent = ""; // empty paragraph
+    para.appendChild("spinner"); // adds span to paragraph
+
     const data = await fetchData();
     if(data.duckPic){
         const img = document.createElement("img");
