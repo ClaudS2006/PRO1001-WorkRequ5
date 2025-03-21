@@ -35,13 +35,19 @@ btn.addEventListener("click", async () => {
     await new Promise(resolve => setTimeout(resolve,1000));
 
     para.textContent = "";
-    
+    // appends pic in paragraph
     if(data.duckPic){
         const img = document.createElement("img");
         img.src = data.duckPic.url;
         img.alt = "Random-Duck-Picture";
 
         para.appendChild(img);
+    // if pic has message attribute display as well
+    if(data.duckPic.message){
+        const attribute = document.createElement("p");
+        attribute.textContent = data.duckPic.message;
+        para.appendChild(p);
+    }
     }else{
         para.textContent = "Failed to load image";
     }

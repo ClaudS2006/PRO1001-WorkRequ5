@@ -1,3 +1,19 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+#the-farm {
+
+}
+#duck-house {
+    
+}
+#entry-sign {
+
+}
+#profile-pic {
+
+}
 /* Spinner */
 .spinner {
     display: inline-block;
@@ -12,4 +28,7 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+#happy-duck {
+
 }
