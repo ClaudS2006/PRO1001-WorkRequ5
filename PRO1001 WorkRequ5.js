@@ -24,8 +24,11 @@ btn.addEventListener("click", async () => {
 
     para.textContent = ""; // empty paragraph
     para.appendChild("spinner"); // adds span to paragraph
+    try {
 
     const data = await fetchData();
+    await new Promise(resolve => setTimeout(resolve,1000));
+    para.textContent = "";
     if(data.duckPic){
         const img = document.createElement("img");
         img.src = data.duckPic.url;
@@ -34,6 +37,10 @@ btn.addEventListener("click", async () => {
         para.appendChild(img);
     }else{
         para.textContent = "Failed to load image";
+    }
+    }
+    catch(error){
+        para.textContent("Error loading image");
     }
 })
     
