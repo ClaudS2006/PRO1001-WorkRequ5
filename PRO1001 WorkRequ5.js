@@ -1,5 +1,9 @@
 // https://corsproxy.io/?https://random-d.uk/api/v2/random 
 
+const header = document.getElementById("entry-sign");
+const para = document.getElementById("profile-pic");
+const btn = document.getElementById("happy-duck");
+
 async function fetchData(){
     try{
         const randomPic = await fetch("https://corsproxy.io/?https://random-d.uk/api/v2/random");
