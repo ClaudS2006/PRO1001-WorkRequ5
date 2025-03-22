@@ -1,6 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    font-family: Pacifico, sans-serif;
 }
 #the-farm {
     display: flex;
@@ -42,5 +43,7 @@ img {
     100% { transform: rotate(360deg); }
 }
 #happy-duck {
-
+    font-family: Pacifico, sans-serif;
+    background-color: cornflowerblue;
+    border-radius: 6px;
 }
