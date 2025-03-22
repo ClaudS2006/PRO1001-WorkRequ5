@@ -5,6 +5,9 @@ body {
 }
 #the-farm {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #duck-house {
     display: flex;
@@ -13,19 +16,29 @@ body {
     align-items: center;
     width: 50%;
     height: 50%;
+    margin: 2em;
     background-color: antiquewhite; 
+    border: 1px solid black;
 }
 #entry-sign {
 
 }
 #profile-pic {
+    background-color: bisque;
     width: 50%;
+    padding: 1em;
+    border: 2px solid black;
+    border-radius: 2px;
+    box-shadow: 10px 10px;
+}
+p {
+    text-align: center;
+    background-color: whitesmoke;
     border: 1px solid black;
 }
 img {
     width: 100%;
     object-fit: cover;
-    border: 1px solid green;
 }
 /* Spinner */
 .spinner {
@@ -44,6 +57,9 @@ img {
 }
 #happy-duck {
     font-family: Pacifico, sans-serif;
-    background-color: cornflowerblue;
+    background: radial-gradient(circle,#4dcb68,#06470a);
+    box-shadow: 5px 5px rgba(25 , 150, 25, 0.5);
     border-radius: 6px;
+    margin: 1em;
+    cursor: pointer;
 }
