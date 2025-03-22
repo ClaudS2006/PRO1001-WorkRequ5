@@ -2,6 +2,9 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: Pacifico, sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2020/11/14/11/10/lake-5741297_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #the-farm {
     display: flex;
@@ -19,9 +22,10 @@ body {
     margin: 2em;
     background-color: antiquewhite; 
     border: 1px solid black;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
 }
 #entry-sign {
-
+    font-size: 2.3rem;
 }
 #profile-pic {
     background-color: bisque;
@@ -56,8 +60,9 @@ img {
     100% { transform: rotate(360deg); }
 }
 #happy-duck {
+    font-size: 2rem;
     font-family: Pacifico, sans-serif;
-    background: radial-gradient(circle,#4dcb68,#06470a);
+    background: radial-gradient(circle,#4dcb68,#0b6d11);
     box-shadow: 5px 5px rgba(25 , 150, 25, 0.5);
     border-radius: 6px;
     margin: 1em;
