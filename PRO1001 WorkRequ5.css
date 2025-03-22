@@ -17,11 +17,14 @@ body {
 #entry-sign {
 
 }
-img {
-    width: 50%;
-}
 #profile-pic {
-
+    width: 50%;
+    border: 1px solid black;
+}
+img {
+    width: 100%;
+    object-fit: cover;
+    border: 1px solid green;
 }
 /* Spinner */
 .spinner {

@@ -6,7 +6,7 @@ const header = document.getElementById("entry-sign");
 const para = document.getElementById("profile-pic");
 const btn = document.getElementById("happy-duck");
 
-// function to get picture-----------------------------------
+// function to get picture---------------------------------------------------------
 async function fetchData(){
     try{
         // api.allorigins displays mixture of pics & gifs
@@ -21,7 +21,8 @@ async function fetchData(){
         return {error: "Failed to load data"};
     }
     }
-// event listener for click with loading spinner
+
+// event listener (click) with loading spinner -----------------------------------
 btn.addEventListener("click", async () => {    
     // create span for spinner
     const spinner = document.createElement("span");
