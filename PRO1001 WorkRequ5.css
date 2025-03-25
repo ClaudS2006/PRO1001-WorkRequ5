@@ -70,17 +70,26 @@ img {
     cursor: pointer;
 }
 @media (max-width: 480px) {
-    /* Smartphones */
+    /* smartphones */
     #entry-sign {
       font-size: 0.55rem;
     }
+    #happy-duck {
+        font-size: 0.8rem;
+    }
   }
   @media (max-width: 768px){
-    /* Tablets */
+    /* tablets */
     #entry-sign {
       font-size: 1.5rem;
     }
+    #happy-duck {
+        font-size: 1.15rem;
+    }
   }
   @media (max-width: 1024px) {
-    /* Tablets Landscape, small Laptops */
+    /* tablets landscape, small laptops */
+  }
+  @media (min-width: 1200px) {
+    /* large desktops */
   }
