@@ -69,3 +69,18 @@ img {
     margin: 1em;
     cursor: pointer;
 }
+@media (max-width: 480px) {
+    /* Smartphones */
+    #entry-sign {
+      font-size: 0.55rem;
+    }
+  }
+  @media (max-width: 768px){
+    /* Tablets */
+    #entry-sign {
+      font-size: 1.5rem;
+    }
+  }
+  @media (max-width: 1024px) {
+    /* Tablets Landscape, small Laptops */
+  }
