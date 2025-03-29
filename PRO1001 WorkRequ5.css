@@ -8,7 +8,7 @@ body {
     background-position: center center;
     width: 100vw;
     height: 100vh;
-    
+    overflow: hidden;
 }
 #the-farm {
     display: flex;
@@ -30,7 +30,7 @@ body {
     border-radius: 12px
 }
 #entry-sign {
-    font-size: 2.3rem;
+    font-size: calc(1.25rem + 1vw);
 }
 #profile-pic {
     background-color: bisque;
@@ -41,6 +41,7 @@ body {
     box-shadow: 10px 10px;
 }
 p {
+    font-size: calc(0.35rem + 1vw);
     text-align: center;
     background-color: whitesmoke;
     border: 1px solid black;
@@ -65,7 +66,7 @@ img {
     100% { transform: rotate(360deg); }
 }
 #happy-duck {
-    font-size: 2rem;
+    font-size: calc(1rem + 1vw);
     font-family: Pacifico, sans-serif;
     background: radial-gradient(circle,#4dcb68,#0b6d11);
     box-shadow: 5px 5px rgba(25 , 150, 25, 0.5);
@@ -84,9 +85,9 @@ img {
   }
   @media (max-width: 768px){
     /* tablets */
-    #entry-sign {
+    /* #entry-sign {
       font-size: 1.5rem;
-    }
+    } */
     #happy-duck {
         font-size: 1.15rem;
     }
