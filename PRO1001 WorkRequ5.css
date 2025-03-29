@@ -2,9 +2,13 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: Pacifico, sans-serif;
-    background-image: url(https://cdn.pixabay.com/photo/2020/11/14/11/10/lake-5741297_1280.jpg);
+    background: url(https://cdn.pixabay.com/photo/2020/11/14/11/10/lake-5741297_1280.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 100vh;
+    
 }
 #the-farm {
     display: flex;
