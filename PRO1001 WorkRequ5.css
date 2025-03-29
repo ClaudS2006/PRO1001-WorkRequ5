@@ -28,8 +28,18 @@ body {
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
     border-radius: 12px
 }
+span {
+    font-size: calc(00.8rem + 1vw);
+    padding-top: 0.5em;
+}
 #entry-sign {
     font-size: calc(1.25rem + 1vw);
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+#counter {
+    padding: 0.5em;
 }
 #profile-pic {
     background-color: bisque;
@@ -65,7 +75,8 @@ img {
     100% { transform: rotate(360deg); }
 }
 #happy-duck {
-    font-size: calc(1rem + 1vw);
+    display: flex;
+    font-size: calc(0.8rem + 1vw);
     font-family: Pacifico, sans-serif;
     background: radial-gradient(circle,#4dcb68,#0b6d11);
     box-shadow: 5px 5px rgba(25 , 150, 25, 0.5);
@@ -74,22 +85,12 @@ img {
     cursor: pointer;
 }
 @media (max-width: 480px) {
-    /* smartphones */
-    #entry-sign {
-      font-size: 0.55rem;
-    }
-    #happy-duck {
-        font-size: 0.8rem;
-    }
+    /* smartphones
+
   }
   @media (max-width: 768px){
     /* tablets */
-    /* #entry-sign {
-      font-size: 1.5rem;
-    } */
-    #happy-duck {
-        font-size: 1.15rem;
-    }
+    
   }
   @media (max-width: 1024px) {
     /* tablets landscape, small laptops */
