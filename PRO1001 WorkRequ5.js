@@ -58,4 +58,15 @@ btn.addEventListener("click", async () => {
         para.textContent = "Error loading image";
     }
 });
+
+// function: count clicks on button
+// get element from DOM -> add event -> count
+
+
+let count = 0;// counter (outside of scope)
+const countElement = document.getElementById("counter"); // for count output
+document.getElementById("happy-duck").addEventListener("click", function(event) {
+        count ++;
+        countElement.textContent = `Pic-Counter: ${count}`;
+});
     
