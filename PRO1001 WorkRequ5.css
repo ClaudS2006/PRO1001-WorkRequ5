@@ -11,19 +11,34 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #the-farm {
     display: flex;
+<<<<<<< Updated upstream
     flex-direction: column;
     align-items: center;
     width: 100vw;
+=======
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+>>>>>>> Stashed changes
 }
 #duck-house {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< Updated upstream
     width: clamp(90%, 1vw, 60%);
+=======
+    width: clamp(400px, 50vw, 90%);
+    height: 50%;
+    margin: 0.5em;
+>>>>>>> Stashed changes
     background-color: antiquewhite; 
     border: 1px solid black;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
@@ -34,7 +49,11 @@ span {
     padding-top: 0.5em;
 }
 #entry-sign {
+<<<<<<< Updated upstream
     font-size: clamp(0.5rem, 3.5vw, 5rem);
+=======
+    font-size: clamp(1rem, 2vw + 0.5rem, 2.875rem);
+>>>>>>> Stashed changes
     display: flex;
     flex-wrap: nowrap;
     margin: 0;
@@ -45,26 +64,41 @@ span {
 }
 #profile-pic {
     background-color: bisque;
-    width: 50%;
+    width: clamp(150px, 50%, 300px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1em;
     border: 2px solid black;
     border-radius: 2px;
     box-shadow: 10px 10px;
 }
+#profile-pic img {
+    width: clamp(100px, 80%, 150px) !important; /* Bild darf nicht größer sein als der Container */ 
+    height: auto !important;
+    object-fit: contain !important; /* Bild bleibt im Rahmen */
+    display: block !important;
+}
 p {
-    font-size: calc(0.35rem + 1vw);
+    font-size: calc(0.15rem + 1vw);
     text-align: center;
     background-color: whitesmoke;
     border: 1px solid black;
     max-width: 100%;
     overflow: hidden;
 }
+<<<<<<< Updated upstream
 p img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
+=======
+
+>>>>>>> Stashed changes
 /* Spinner */
 .spinner {
     display: inline-block;
