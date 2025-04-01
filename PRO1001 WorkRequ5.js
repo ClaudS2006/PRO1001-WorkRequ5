@@ -43,6 +43,11 @@ btn.addEventListener("click", async () => {
         const img = document.createElement("img");
         img.src = data.duckPic.url;
         img.alt = "Random-Duck-Picture";
+        // removes def attributes
+        img.onload = () => {
+        img.removeAttribute("width");
+        img.removeAttribute("height");
+        };
 
         para.appendChild(img);
     // if pic has message attribute display as well
