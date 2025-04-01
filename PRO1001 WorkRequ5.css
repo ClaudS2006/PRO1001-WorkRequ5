@@ -6,34 +6,35 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
 }
 #the-farm {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 #duck-house {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
-    margin: 2em;
+    width: clamp(90%, 1vw, 60%);
     background-color: antiquewhite; 
     border: 1px solid black;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.05);
-    border-radius: 12px
+    border-radius: 12px;
 }
 span {
-    font-size: calc(00.8rem + 1vw);
+    font-size: calc(0.8rem + 1vw);
     padding-top: 0.5em;
 }
 #entry-sign {
-    font-size: calc(1.25rem + 1vw);
+    font-size: clamp(0.5rem, 3.5vw, 5rem);
     display: flex;
     flex-wrap: nowrap;
     margin: 0;
@@ -55,9 +56,13 @@ p {
     text-align: center;
     background-color: whitesmoke;
     border: 1px solid black;
+    max-width: 100%;
+    overflow: hidden;
 }
-img {
+p img {
     width: 100%;
+    height: auto;
+    display: block;
     object-fit: cover;
 }
 /* Spinner */
@@ -87,9 +92,6 @@ img {
 }
 @media (max-width: 480px) {
     /* smartphones*/
-    #entry-sign {
-        font-size: 0.9rem;
-    }
   }
   @media (max-width: 768px){
     /* tablets */
