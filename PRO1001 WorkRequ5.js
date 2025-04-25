@@ -13,7 +13,7 @@ async function fetchData() {
     // api.allorigins displays mixture of pics & gifs
     // Charlotte: can I get your feedback on this API set-up? to avoid cache I added new date/time to make it look like new request
     const randomPic = await fetch(
-      "https://api.cors.lol/?url=https://random-d.uk/api/random?time=" +
+      "https://api.cors.lol/?url=https://random-d.uk/api/random" +
         new Date().getTime()
     );
     if (!randomPic.ok) throw new Error(`Fetch Error: ${randomPic.status}`);
