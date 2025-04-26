@@ -10,16 +10,11 @@ const btn = document.getElementById("happy-duck");
 // function to get picture---------------------------------------------------------
 async function fetchData() {
   try {
-    // api.allorigins displays mixture of pics & gifs
-    // Charlotte: can I get your feedback on this API set-up? to avoid cache I added new date/time to make it look like new request
-    const randomPic = await fetch(
-      "https://api.cors.lol/?url=https://random-d.uk/api/random" +
-        new Date().getTime()
-    );
+    const randomPic = await fetch("https://dog.ceo/api/breeds/image/random");
     if (!randomPic.ok) throw new Error(`Fetch Error: ${randomPic.status}`);
-    const duckPic = await randomPic.json();
+    const dogPic = await randomPic.json();
 
-    return { duckPic };
+    return { dogPic };
   } catch (error) {
     console.error("Error fetching data:", error.message);
     return { error: "Failed to load data" };
@@ -41,22 +36,22 @@ btn.addEventListener("click", async () => {
 
     para.textContent = "";
     // appends pic in paragraph
-    if (data.duckPic) {
+    if (data.dogPic) {
       const img = document.createElement("img");
-      img.src = data.duckPic.url;
-      img.alt = "Random-Duck-Picture";
+      img.src = data.dogPic.message;
+      img.alt = "Random-Dog-Picture";
 
-      // remove def attributes
+      /* remove def attributes
       img.onload = () => {
         img.removeAttribute("width");
         img.removeAttribute("height");
-      };
+      };*/
 
       para.appendChild(img);
       // if pic has message attribute display as well
-      if (data.duckPic.message) {
+      if (data.dogPic.message) {
         const attribute = document.createElement("p");
-        attribute.textContent = data.duckPic.message;
+        attribute.textContent = data.dogPic.message;
         para.appendChild(attribute);
       }
     } else {
