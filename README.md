@@ -1,4 +1,4 @@
-WebApp to fetch random duck pics 🦆 Project for ONF Module 5
+WebApp to fetch random dog pics 🐶 Project for ONF Module 5
 
 // ===== About ===== //
 This project uses the Random Duck API to display random duck images and facts.
